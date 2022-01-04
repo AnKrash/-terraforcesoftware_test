@@ -22,6 +22,6 @@ class Car extends Model
      */
     public function companies()
     {
-        return $this->belongsToMany(Company::class);
+        return $this->belongsToMany(Car::class);
     }
 }

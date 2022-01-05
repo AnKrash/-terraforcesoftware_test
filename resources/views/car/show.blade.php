@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Companies')
+@section('title', 'Cars')
 
 @section('content_header')
-    <h1>Company with clients</h1>
+    <h1>Car with clients</h1>
 @stop
 @section('content')
     <div class="container-fluid">
@@ -11,7 +11,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header row ">
-                        <h2 class="card-title col-8"> Clients of {{$company->name}}:</h2>
+                        <h2 class="card-title col-8"> Clients of {{$car->name}}:</h2>
 
                     </div>
                     <!-- /.card-header -->
@@ -42,7 +42,7 @@
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        @foreach($company->clients as $client)
+                                        @foreach($car->clients as $client)
                                             <div class="row">
                                                 <tr class="odd">
                                                     <td class="dtr-control">

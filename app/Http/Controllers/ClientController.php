@@ -38,7 +38,7 @@ class ClientController extends Controller
     {
 
         $request->validate([
-            'name' => 'required|unique:companies|max:255'
+            'name' => 'required|unique:cars|max:255'
         ]);
         $client = new Client();
         $client->name = $request->input('name');

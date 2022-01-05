@@ -19,7 +19,7 @@ class CreateClientsTable extends Migration
             $table->timestamps();
         });
 
-        Schema::create('client_car', function (Blueprint $table) {
+        Schema::create('car_client', function (Blueprint $table) {
             $table->unsignedBigInteger('client_id');
             $table->unsignedBigInteger('car_id');
 
@@ -38,6 +38,7 @@ class CreateClientsTable extends Migration
                 ->onDelete('cascade');
         });
     }
+
     /**
      * Reverse the migrations.
      *
@@ -45,6 +46,7 @@ class CreateClientsTable extends Migration
      */
     public function down()
     {
+        Schema::dropIfExists('client_car');
         Schema::dropIfExists('clients');
     }
 }

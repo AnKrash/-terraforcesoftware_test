@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'Clients')
 
 @section('content_header')
-    <h1>Dashboard</h1>
+    <h1>Clients</h1>
 @stop
 
 @section('content')
@@ -11,10 +11,10 @@
         @csrf
         @method('PUT')
         <div class="form-group">
-            <label for="updateCompany"> Update Client </label>
+            <label for="updateClient"> Update Client </label>
 
             <input type="text" class="form-control" name="name" value="{{$client->name}}"
-                   placeholder="Update company">
+                   placeholder="Update client">
         </div>
 
         <div class="card-footer">

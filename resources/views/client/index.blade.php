@@ -1,6 +1,6 @@
-{{--//@extends('adminlte::page')--}}
+@extends('adminlte::page')
 
-@section('title', 'Companies')
+@section('title', 'Clients')
 
 @section('content_header')
     <h1>Clients</h1>
@@ -107,6 +107,6 @@
 
 @stop
 @section('css')
-{{--    <link rel="stylesheet" href="/css/admin_custom.css">--}}
+    <link rel="stylesheet" href="/css/admin_custom.css">
 @stop
 

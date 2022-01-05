@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Car extends Model
 {
     use HasFactory;
+
     /**
      * The attributes that are mass assignable.
      *
@@ -18,10 +19,10 @@ class Car extends Model
     ];
 
     /**
-     * The roles that belong to the companies.
+     * The cars that belong to the clients.
      */
-    public function companies()
+    public function clients()
     {
-        return $this->belongsToMany(Car::class);
+        return $this->belongsToMany(Client::class);
     }
 }

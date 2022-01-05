@@ -3,15 +3,15 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
-    <h1>Dashboard</h1>
+    <h1>Cars</h1>
 @stop
 
 @section('content')
     <form action="{{route('cars.store')}}" method="POST">
         @csrf
         <div class="form-group">
-            <label for="createCompany"> Create Company </label>
-            <input type="text" class="form-control" name="name" id="createCompany" placeholder="Enter company">
+            <label for="createCar"> Create Car </label>
+            <input type="text" class="form-control" name="name" id="createCar" placeholder="Enter car">
         </div>
 
         <div class="card-footer">

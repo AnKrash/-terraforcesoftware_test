@@ -18,10 +18,10 @@ class Client extends Model
     ];
 
     /**
-     * The clients that belong to the company.
+     * The clients that belong to the car.
      */
-    public function clients()
+    public function cars()
     {
-        return $this->belongsToMany(Client::class);
+        return $this->belongsToMany(Car::class);
     }
 }

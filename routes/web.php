@@ -17,23 +17,15 @@ use Inertia\Inertia;
 |
 */
 
-//Route::get('/', function () {
-//    return Inertia::render('Welcome', [
-//        'canLogin' => Route::has('login'),
-//        'canRegister' => Route::has('register'),
-//        'laravelVersion' => Application::VERSION,
-//        'phpVersion' => PHP_VERSION,
-//    ]);
-//});
-//
 Route::get('/', function () {
     return view('welcome');
 })->name('dashboard');
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
 
-require __DIR__.'/auth.php';
+Route::get('/dashboard', function () {
+    return view('admin_template');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__ . '/auth.php';
 
 Route::resources([
     'cars' => CarController::class,

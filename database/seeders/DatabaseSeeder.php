@@ -15,13 +15,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $clients = Client::factory(100)->create();
         $cars = Car::factory(100)->create();
+        $clients = Client::factory(100)->create();
 
         $clients->each(function ($client) use ($cars) {
             $client->cars()->attach(
-                $cars->random(rand(1, 3))->pluck('id')->toArray()
+                $cars->random(rand(1, 20))->pluck('id')->toArray()
             );
         });
+
     }
 }

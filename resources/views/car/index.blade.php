@@ -1,39 +1,21 @@
-{{--@extends('adminlte::page')--}}
+@extends('adminlte::page')
 
-{{--@section('title', 'Companies')--}}
+@section('title', 'Cars')
 
-{{--@section('content_header')--}}
-{{--    <h1>Companies</h1>--}}
-{{--@stop--}}
+@section('content_header')
+    <h1>Cars</h1>
+@stop
 
-{{--@section('content')--}}
-    <!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    @section('javascript' )
-        <script src="{{asset('js/jquery.min.js')}}"></script>
-        <script type="text/javascript" src="{{ mix('js/app.js') }}"></script>
-    @endsection
-    <link href="{{ mix('css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://unpkg.com/xzoom/dist/xzoom.css" media="all"/>
-    <title>Cars</title>
-
-</head>
-<body>
+@section('content')
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
                 <div class="card">
                     <div class="card-header row ">
-                        <h3 class="card-title col-8"> Companies DataTable </h3>
+                        <h3 class="card-title col-8"> Cars DataTable </h3>
                         <a style="background-color: deepskyblue" class=" btn btn-info fa fa-plus-square "
                            href="{{route('cars.create')}}">
-                            Create Company</a>
+                            Create Car</a>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
@@ -57,7 +39,7 @@
                                             <th class="sorting sorting_desc" tabindex="0" aria-controls="example2"
                                                 rowspan="1" colspan="1"
                                                 aria-label="Browser: activate to sort column ascending"
-                                                aria-sort="descending">Company
+                                                aria-sort="descending">Car
                                             </th>
 
                                         </tr>
@@ -75,21 +57,21 @@
                                                     <td class="col-4 ">
                                                         <a class="btn btn-info fa fa-eye " aria-hidden="true"
                                                            href="{{route('cars.show',$car->id)}}"> Show
-                                                            company</a>
+                                                            car</a>
                                                         <a style="background-color: green"
                                                            class="btn btn-info fa fa-pencil " aria-hidden="true"
                                                            href="{{route('cars.edit',$car->id)}}"> Update
-                                                            company</a>
+                                                            car</a>
                                                     </td>
                                                     <td class="col-1">
                                                         <form method="POST" class=""
-                                                              action="{{route('carss.destroy',$car->id)}}">
+                                                              action="{{route('cars.destroy',$car->id)}}">
                                                             {{ csrf_field() }}
                                                             {{ method_field('DELETE') }}
                                                             <div class="form-group ">
                                                                 <input type="submit"
                                                                        class="btn-sm btn-danger delete-company  fa fa-pencil"
-                                                                       value="Delete company">
+                                                                       value="Delete car">
                                                             </div>
                                                         </form>
 
@@ -102,7 +84,7 @@
                                         <tr>
                                             <th rowspan="1" colspan="1">ID
                                             </th>
-                                            <th rowspan="1" colspan="1">Company
+                                            <th rowspan="1" colspan="1">Car
                                             </th>
                                         </tr>
                                         </tfoot>
@@ -123,10 +105,8 @@
     </div>
     <script src="https://use.fontawesome.com/4523420eae.js"></script>
 
-{{--@stop--}}
-{{--@section('css')--}}
-{{--    <link rel="stylesheet" href="/css/admin_custom.css">--}}
-{{--@stop--}}
+@stop
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
 
-</body>
-</html>

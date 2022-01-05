@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Companies')
+@section('title', 'Clients')
 
 @section('content_header')
-    <h1>Client and his companies</h1>
+    <h1>Client and his cars</h1>
 @stop
 @section('content')
     <div class="container-fluid">
@@ -11,7 +11,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header row ">
-                        <h2 class="card-title col-8"> Company for client
+                        <h2 class="card-title col-8"> Car for client
                             {{$client->name}}:
                         </h2>
 
@@ -33,25 +33,25 @@
                                             <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1"
                                                 colspan="1"
                                                 aria-label="Rendering engine: activate to sort column ascending">
-                                                ID Company
+                                                ID Car
                                             </th>
                                             <th class="sorting sorting_desc" tabindex="0" aria-controls="example2"
                                                 rowspan="1" colspan="1"
                                                 aria-label="Browser: activate to sort column ascending"
-                                                aria-sort="descending">Company
+                                                aria-sort="descending">Car
                                             </th>
 
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        @foreach($client->companies as $company)
+                                        @foreach($client->cars as $car)
                                             <div class="row">
                                                 <tr class="odd">
                                                     <td class="dtr-control">
-                                                        {{$company->id}}
+                                                        {{$car->id}}
                                                     </td>
                                                     <td class="sorting_1">
-                                                        {{$company->name}}
+                                                        {{$car->name}}
                                                     </td>
                                                 </tr>
                                             </div>
@@ -59,9 +59,9 @@
                                         </tbody>
                                         <tfoot>
                                         <tr>
-                                            <th rowspan="1" colspan="1">ID C0mpany
+                                            <th rowspan="1" colspan="1">ID Car
                                             </th>
-                                            <th rowspan="1" colspan="1">Company
+                                            <th rowspan="1" colspan="1">Car
                                             </th>
                                         </tr>
                                         </tfoot>

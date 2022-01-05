@@ -13,7 +13,7 @@ class CarController extends Controller
      */
     public function index()
     {
-        $cars = Car::simplePaginate(100);
+        $cars = Car::simplePaginate(10);
 
         return view('car/index', ['cars' => $cars]);
     }

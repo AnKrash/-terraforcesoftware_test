@@ -9,9 +9,15 @@ How to install the project:
 
 Make Project.
 Clone from gitHub: git@github.com:AnKrash/-terraforcesoftware_test.git
+
 composer install
+
 Configure the settings corresponding to your database.
+
 Make migration: php artisan migrate
+
 Make seeds: php artisan db:seed
+
 php artisan key:generate
+
 Make serve: php artisan serve

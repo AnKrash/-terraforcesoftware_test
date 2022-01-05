@@ -8,7 +8,7 @@ After migrations and seeds, there will be 100 records in each table.
 How to install the project:
 
 Make Project.
-Clone from gitHub
+Clone from gitHub: git@github.com:AnKrash/-terraforcesoftware_test.git
 composer install
 Configure the settings corresponding to your database.
 Make migration: php artisan migrate
